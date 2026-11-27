@@ -103,8 +103,28 @@ def _friendly(err: Exception) -> str:
     return re.sub(r"^ERROR:\s*(\[\w+\]\s*[\w-]+:\s*)?", "", msg)[:300]
 
 
+def _deno_path():
+    try:
+        import deno
+        return deno.find_deno_bin()
+    except Exception:
+        return None
+
+
+DENO = _deno_path()
+PROXY = os.environ.get("YT_PROXY", "").strip()  # e.g. http://user:pass@host:port (residential proxy)
+
+
 def _ydl_opts(**extra) -> dict:
-    opts = {"quiet": True, "no_warnings": True, "noplaylist": True, "noprogress": True}
+    opts = {
+        "quiet": True, "no_warnings": True, "noplaylist": True, "noprogress": True,
+        # Datacenter IPv6 ranges get bot-checked more often; force IPv4.
+        "source_address": "0.0.0.0",
+    }
+    if DENO:  # JS runtime yt-dlp uses to solve YouTube's player challenges
+        opts["js_runtimes"] = {"deno": {"path": DENO}}
+    if PROXY:
+        opts["proxy"] = PROXY
     if COOKIE_FILE:
         opts["cookiefile"] = str(COOKIE_FILE)
     opts.update(extra)

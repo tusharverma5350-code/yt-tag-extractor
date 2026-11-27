@@ -20,6 +20,8 @@ services:
         value: "1080"
       - key: YT_API_KEY      # optional: YouTube Data API v3 key (never bot-blocked)
         sync: false
+      - key: YT_PROXY        # optional: residential proxy for downloads, http://user:pass@host:port
+        sync: false
 
   - type: web
     name: yt-tag-extractor
