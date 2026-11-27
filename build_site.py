@@ -592,7 +592,7 @@ def head(p, jsonld):
 <link rel="manifest" href="/manifest.json">
 <link rel="preconnect" href="https://i.ytimg.com">
 {api_pre}
-<script>document.documentElement.dataset.theme=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+<script>document.documentElement.dataset.theme=localStorage.getItem("theme")||"light"</script>
 <link rel="stylesheet" href="/app.css?v={VERSION}">
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False, separators=(",", ":"))}</script>
 </head>"""
