@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yt-tag-extractor.onrender.com/sitemap.xml
+Sitemap: https://yt-tag-extractor-hra2.onrender.com/sitemap.xml
