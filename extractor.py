@@ -177,6 +177,11 @@ def _info_api(vid: str, url: str) -> dict:
         with urllib.request.urlopen(f"https://www.googleapis.com/youtube/v3/videos?{q}", timeout=10) as r:
             data = json.load(r)
     except urllib.error.HTTPError as e:
+        try:
+            reason = json.load(e).get("error", {}).get("message", "")
+        except Exception:
+            reason = ""
+        print(f"YouTube Data API error {e.code}: {reason}", flush=True)
         raise ExtractError(f"YouTube API error ({e.code}).") from e
     items = data.get("items") or []
     if not items:

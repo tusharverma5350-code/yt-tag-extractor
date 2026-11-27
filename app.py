@@ -74,7 +74,8 @@ class DownloadReq(BaseModel):
 
 @app.get("/api/health")
 async def health():
-    return {"ok": True}
+    return {"ok": True, "api_key_loaded": bool(extractor.YT_API_KEY), "cookies_loaded": bool(extractor.COOKIE_FILE),
+            "proxy_loaded": bool(extractor.PROXY)}
 
 
 @app.post("/api/info")
