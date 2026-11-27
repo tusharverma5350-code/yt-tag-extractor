@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube Thumbnail Downloader – HD, Free</title>
+<meta name="description" content="Download any YouTube video or Shorts thumbnail in HD (1280×720), SD, HQ and MQ sizes. Free YouTube thumbnail downloader, no sign-up.">
+<link rel="canonical" href="https://yt-tag-extractor.onrender.com/youtube-thumbnail-downloader/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#e11d2e">
+<meta name="api-base" content="https://yt-tag-extractor-api.onrender.com">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TagExtract">
+<meta property="og:title" content="YouTube Thumbnail Downloader – HD, Free">
+<meta property="og:description" content="Download any YouTube video or Shorts thumbnail in HD (1280×720), SD, HQ and MQ sizes. Free YouTube thumbnail downloader, no sign-up.">
+<meta property="og:url" content="https://yt-tag-extractor.onrender.com/youtube-thumbnail-downloader/">
+<meta property="og:image" content="https://yt-tag-extractor.onrender.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Thumbnail Downloader – HD, Free">
+<meta name="twitter:description" content="Download any YouTube video or Shorts thumbnail in HD (1280×720), SD, HQ and MQ sizes. Free YouTube thumbnail downloader, no sign-up.">
+<meta name="twitter:image" content="https://yt-tag-extractor.onrender.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://i.ytimg.com">
+<link rel="preconnect" href="https://yt-tag-extractor-api.onrender.com" crossorigin>
+<script>document.documentElement.dataset.theme=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+<link rel="stylesheet" href="/app.css?v=1795769383">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yt-tag-extractor.onrender.com/"},{"@type":"ListItem","position":2,"name":"YouTube Thumbnail Downloader","item":"https://yt-tag-extractor.onrender.com/youtube-thumbnail-downloader/"}]},{"@type":"WebApplication","name":"YouTube Thumbnail Downloader","url":"https://yt-tag-extractor.onrender.com/youtube-thumbnail-downloader/","description":"Download any YouTube video or Shorts thumbnail in HD (1280×720), SD, HQ and MQ sizes. Free YouTube thumbnail downloader, no sign-up.","applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"TagExtract","url":"https://yt-tag-extractor.onrender.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size are YouTube thumbnails?","acceptedAnswer":{"@type":"Answer","text":"The recommended upload size is 1280×720 (16:9). YouTube also creates smaller versions: 640×480, 480×360 and 320×180."}},{"@type":"Question","name":"Why is there no HD thumbnail?","acceptedAnswer":{"@type":"Answer","text":"Some older or low-resolution videos never got a 1280×720 version. The tool then shows only the sizes that exist."}},{"@type":"Question","name":"Can I download a Shorts thumbnail?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste the /shorts/ link. Shorts thumbnails are usually a frame picked from the video."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's free and needs no sign-up. Images download straight to your device as JPG files."}}]}]}</script>
+</head>
+<body data-focus="thumbnails">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="logo" href="/" aria-label="TagExtract home"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#e11d2e"/><path d="M8 11.5a2 2 0 0 1 2-2h6.2l7.3 7.3a1.6 1.6 0 0 1 0 2.3l-4.2 4.2a1.6 1.6 0 0 1-2.3 0L9.7 16A2 2 0 0 1 8 14.2z" fill="#fff"/><circle cx="12" cy="13" r="1.6" fill="#e11d2e"/></svg><span>TagExtract</span></a>
+  <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <nav class="nav" aria-label="Tools"><a href="/">Tag Extractor</a><a href="/youtube-shorts-tag-extractor/">Shorts Tags</a><a href="/youtube-hashtag-extractor/">Hashtags</a><a href="/youtube-description-extractor/">Description</a><a href="/youtube-thumbnail-downloader/" aria-current="page">Thumbnail</a><a href="/youtube-video-downloader/">Downloader</a></nav>
+  <button class="icon-btn" id="theme" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+</div></header>
+<main id="main" class="wrap">
+<section class="hero"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › YouTube Thumbnail Downloader</nav><h1>YouTube Thumbnail Downloader</h1><p class="lead">Save the thumbnail of any YouTube video or Short in full HD (1280×720) or smaller sizes, in one click.</p></section>
+
+<section class="tool" id="tool" aria-label="YouTube Thumbnail Downloader">
+  <form class="search" id="form" novalidate>
+    <label class="field">
+      <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+      <span class="skip">YouTube video or Shorts URL</span>
+      <input id="url" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="Paste a YouTube video or Shorts link" required>
+      <button type="button" class="paste" id="paste">Paste</button>
+    </label>
+    <button class="btn" id="go" type="submit">Get thumbnail</button>
+  </form>
+  <div class="hint"><span>Works with youtube.com/watch, youtu.be and /shorts/ links</span><button type="button" data-example="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Try an example</button></div>
+  <div class="notice" id="notice" role="alert" aria-live="polite"></div>
+  <div class="recent" id="recent" hidden></div>
+</section>
+
+<div class="skeleton" id="skeleton" aria-hidden="true">
+  <div class="sk" style="height:132px"></div>
+  <div class="sk" style="height:220px;margin-top:12px"></div>
+</div>
+
+<section class="results" id="results" hidden aria-live="polite">
+  <div class="vid">
+    <img id="v-thumb" width="200" height="113" alt="">
+    <div><h2 id="v-title"></h2><div class="meta" id="v-meta"></div></div>
+  </div>
+  <div class="panel">
+    <div class="tabs" role="tablist" aria-label="Video data">
+      <button class="tab" role="tab" data-tab="tags">Tags<span class="n" id="n-tags"></span></button>
+      <button class="tab" role="tab" data-tab="hashtags">Hashtags<span class="n" id="n-hash"></span></button>
+      <button class="tab" role="tab" data-tab="description">Description</button>
+      <button class="tab" role="tab" data-tab="thumbnails">Thumbnails</button>
+      <button class="tab" role="tab" data-tab="download">Download</button>
+      <button class="tab" role="tab" data-tab="details">Details</button>
+    </div>
+    <div class="pane" id="pane-tags" role="tabpanel">
+      <div class="bar"><span class="stat" id="tagstat"></span>
+        <div class="actions"><button class="btn sm" id="copy-tags">Copy all tags</button><button class="btn sm ghost" id="copy-tags-hash">Copy as #hashtags</button><button class="btn sm ghost" id="txt-tags">Save .txt</button><button class="btn sm ghost" id="reset-tags">Reset</button></div></div>
+      <div class="chips" id="tags"></div>
+      <p class="small">Click a tag to copy it, or × to remove it before copying all of them.</p>
+    </div>
+    <div class="pane" id="pane-hashtags" role="tabpanel" hidden>
+      <div class="bar"><span class="stat">Hashtags found in the title and description</span><div class="actions"><button class="btn sm" id="copy-hash">Copy hashtags</button></div></div>
+      <div class="chips" id="hashtags"></div>
+    </div>
+    <div class="pane" id="pane-description" role="tabpanel" hidden>
+      <div class="bar"><span class="stat" id="descstat"></span><div class="actions"><button class="btn sm" id="copy-desc">Copy description</button><button class="btn sm ghost" id="txt-desc">Save .txt</button></div></div>
+      <pre class="desc" id="desc"></pre>
+      <ul class="links" id="links"></ul>
+    </div>
+    <div class="pane" id="pane-thumbnails" role="tabpanel" hidden><div class="thumbs" id="thumbs"></div></div>
+    <div class="pane" id="pane-download" role="tabpanel" hidden>
+      <div class="dl" id="dl"></div>
+      <div class="notice err" id="dlerr" role="alert"></div>
+      <p class="small" id="dlnote"></p>
+    </div>
+    <div class="pane" id="pane-details" role="tabpanel" hidden><dl class="details" id="details"></dl></div>
+  </div>
+</section>
+
+
+<section class="features" aria-label="Features">
+  <div class="feature"><div class="fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div><h3>Instant and free</h3><p>No sign-up, no limits for normal use, no browser extension to install.</p></div>
+  <div class="feature"><div class="fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Everything in one place</h3><p>Tags, hashtags, full description, links, thumbnails, stats and downloads.</p></div>
+  <div class="feature"><div class="fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div><h3>Copy in one click</h3><p>Copy all tags comma-separated or as hashtags, remove the ones you don't need.</p></div>
+  <div class="feature"><div class="fi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Private</h3><p>No account, no tracking cookies. We only read public YouTube data.</p></div>
+</section>
+
+<article class="content">
+<h2>Download YouTube thumbnails in every size</h2>
+<p>Paste a link and this <strong>YouTube thumbnail downloader</strong> shows every available size of the video's thumbnail. Click <em>Download</em> to save it as a JPG.</p>
+<table>
+<tr><th>Size</th><th>Resolution</th><th>Best for</th></tr>
+<tr><td>MAXRES (HD)</td><td>1280×720</td><td>Studying designs, presentations, high-quality previews</td></tr>
+<tr><td>SD</td><td>640×480</td><td>Blog posts, documents</td></tr>
+<tr><td>HQ</td><td>480×360</td><td>Social posts, quick previews</td></tr>
+<tr><td>MQ</td><td>320×180</td><td>Small cards, lists</td></tr>
+</table>
+<p>Older or low-resolution videos may not have a MAXRES version. In that case the tool only shows the sizes that exist.</p>
+
+<h2>How to download a thumbnail</h2>
+<ol>
+<li>Copy the YouTube video or Shorts link.</li>
+<li>Paste it above and press <em>Get thumbnail</em>.</li>
+<li>Choose a size and press <em>Download</em>.</li>
+</ol>
+
+<h2>What to learn from top thumbnails</h2>
+<ul>
+<li><strong>One clear subject.</strong> Usually a face showing emotion, or one object.</li>
+<li><strong>Three words or fewer.</strong> Text that adds to the title rather than repeating it.</li>
+<li><strong>High contrast.</strong> Thumbnails must read at phone size, roughly 160 pixels wide.</li>
+<li><strong>Consistency.</strong> Big channels reuse colours and layouts so viewers recognise them.</li>
+</ul>
+<div class="callout"><strong>Copyright:</strong> thumbnails belong to their creators. Downloading them for reference, research or commentary is common, but don't re-upload someone else's thumbnail as your own.</div>
+<p>Need the video's tags or description too? They're in the other tabs of the same results, or try the <a href="/">YouTube tag extractor</a>.</p>
+</article>
+<section class="faq content" id="faq"><h2>Frequently asked questions</h2><details><summary>What size are YouTube thumbnails?</summary><p>The recommended upload size is 1280×720 (16:9). YouTube also creates smaller versions: 640×480, 480×360 and 320×180.</p></details><details><summary>Why is there no HD thumbnail?</summary><p>Some older or low-resolution videos never got a 1280×720 version. The tool then shows only the sizes that exist.</p></details><details><summary>Can I download a Shorts thumbnail?</summary><p>Yes. Paste the /shorts/ link. Shorts thumbnails are usually a frame picked from the video.</p></details><details><summary>Is it free?</summary><p>Yes. It's free and needs no sign-up. Images download straight to your device as JPG files.</p></details></section>
+<section class="content"><h2>More free YouTube tools</h2><div class="related"><a href="/">YouTube Tag Extractor<span>See and copy the hidden tags of any video.</span></a><a href="/youtube-shorts-tag-extractor/">Shorts Tag Extractor<span>Get tags and hashtags from any YouTube Short.</span></a><a href="/youtube-hashtag-extractor/">Hashtag Extractor<span>Pull every #hashtag from a title and description.</span></a><a href="/youtube-description-extractor/">Description Extractor<span>Copy the full description and all its links.</span></a><a href="/youtube-video-downloader/">Video Downloader<span>Download as MP4 (360p–1080p) or MP3 audio.</span></a></div></section>
+</main>
+<footer><div class="wrap">
+  <div class="about"><a class="logo" href="/"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#e11d2e"/><path d="M8 11.5a2 2 0 0 1 2-2h6.2l7.3 7.3a1.6 1.6 0 0 1 0 2.3l-4.2 4.2a1.6 1.6 0 0 1-2.3 0L9.7 16A2 2 0 0 1 8 14.2z" fill="#fff"/><circle cx="12" cy="13" r="1.6" fill="#e11d2e"/></svg><span>TagExtract</span></a><p>Free YouTube tools for creators: extract tags, hashtags and descriptions, download thumbnails and videos. No sign-up.</p></div>
+  <div><h4>Tools</h4><ul><li><a href="/">YouTube Tag Extractor</a></li><li><a href="/youtube-shorts-tag-extractor/">Shorts Tag Extractor</a></li><li><a href="/youtube-hashtag-extractor/">Hashtag Extractor</a></li><li><a href="/youtube-description-extractor/">Description Extractor</a></li><li><a href="/youtube-thumbnail-downloader/">Thumbnail Downloader</a></li><li><a href="/youtube-video-downloader/">Video Downloader</a></li></ul></div>
+  <div><h4>Site</h4><ul><li><a href="/how-to-find-youtube-video-tags/">How to find video tags</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://github.com/tusharverma5350-code/yt-tag-extractor" rel="noopener">GitHub</a></li></ul></div>
+</div><div class="legal">© 2026 TagExtract. Not affiliated with YouTube or Google.</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js?v=1795769383" defer></script>
+</body></html>

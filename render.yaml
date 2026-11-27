@@ -1,0 +1,38 @@
+# Render Blueprint: one free static site (the pages Google indexes) + one free Python API.
+services:
+  - type: web
+    name: yt-tag-extractor-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: SERVE_SITE
+        value: "0"
+      - key: ALLOWED_ORIGINS
+        value: https://yt-tag-extractor.onrender.com
+      - key: MAX_DURATION_MIN
+        value: "20"
+      - key: MAX_HEIGHT
+        value: "1080"
+      - key: YT_API_KEY      # optional: YouTube Data API v3 key (never bot-blocked)
+        sync: false
+
+  - type: web
+    name: yt-tag-extractor
+    runtime: static
+    buildCommand: echo "site is pre-built by build_site.py"
+    staticPublishPath: ./site
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
