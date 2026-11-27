@@ -88,6 +88,13 @@ async def health():
             "proxy_loaded": bool(extractor.PROXY)}
 
 
+@app.get("/api/_whoami")  # TEMP diagnostic, remove after checking proxy headers
+async def whoami(request: Request):
+    keys = ("cf-connecting-ip", "true-client-ip", "x-forwarded-for", "x-real-ip", "forwarded", "rndr-id")
+    return {"client_host": request.client.host if request.client else None, "detected": client_ip(request),
+            **{k: request.headers.get(k) for k in keys}}
+
+
 @app.post("/api/info")
 async def info(req: InfoReq, request: Request):
     rate_limit(request, "info")
