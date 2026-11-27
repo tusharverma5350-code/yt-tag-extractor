@@ -13,7 +13,7 @@ services:
       - key: SERVE_SITE
         value: "0"
       - key: ALLOWED_ORIGINS
-        value: https://yt-tag-extractor.netlify.app,https://yt-tag-extractor-hra2.onrender.com
+        value: https://yt-tag-extractor.pages.dev,https://yt-tag-extractor-hra2.onrender.com
       - key: MAX_DURATION_MIN
         value: "20"
       - key: MAX_HEIGHT
