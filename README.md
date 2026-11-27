@@ -2,15 +2,15 @@
 
 Paste any YouTube video or Shorts link to get its **tags, hashtags, full description, links, thumbnails (HD)**, stats and an **MP4 / MP3 download**.
 
-**Live site:** https://yt-tag-extractor-hra2.onrender.com
+**Live site:** https://yt-tag-extractor.netlify.app
 
 Tools:
-- [YouTube Tag Extractor](https://yt-tag-extractor-hra2.onrender.com/)
-- [YouTube Shorts Tag Extractor](https://yt-tag-extractor-hra2.onrender.com/youtube-shorts-tag-extractor/)
-- [YouTube Hashtag Extractor](https://yt-tag-extractor-hra2.onrender.com/youtube-hashtag-extractor/)
-- [YouTube Description Extractor](https://yt-tag-extractor-hra2.onrender.com/youtube-description-extractor/)
-- [YouTube Thumbnail Downloader](https://yt-tag-extractor-hra2.onrender.com/youtube-thumbnail-downloader/)
-- [YouTube Video Downloader](https://yt-tag-extractor-hra2.onrender.com/youtube-video-downloader/)
+- [YouTube Tag Extractor](https://yt-tag-extractor.netlify.app/)
+- [YouTube Shorts Tag Extractor](https://yt-tag-extractor.netlify.app/youtube-shorts-tag-extractor/)
+- [YouTube Hashtag Extractor](https://yt-tag-extractor.netlify.app/youtube-hashtag-extractor/)
+- [YouTube Description Extractor](https://yt-tag-extractor.netlify.app/youtube-description-extractor/)
+- [YouTube Thumbnail Downloader](https://yt-tag-extractor.netlify.app/youtube-thumbnail-downloader/)
+- [YouTube Video Downloader](https://yt-tag-extractor.netlify.app/youtube-video-downloader/)
 
 ## Run locally
 ```bash
