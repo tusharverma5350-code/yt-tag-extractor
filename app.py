@@ -28,8 +28,18 @@ LIMITS = {  # endpoint -> (max requests, window seconds) per IP
 _hits: dict[tuple[str, str], deque] = defaultdict(deque)
 
 
+def client_ip(request: Request) -> str:
+    """Real visitor IP. Cloudflare (in front of Render) overwrites CF-Connecting-IP, so clients
+    can't fake it. The leftmost X-Forwarded-For entry is client-controlled, so use the rightmost."""
+    h = request.headers
+    ip = h.get("cf-connecting-ip") or h.get("true-client-ip")
+    if not ip and h.get("x-forwarded-for"):
+        ip = h["x-forwarded-for"].split(",")[-1]
+    return (ip or (request.client.host if request.client else "") or "?").strip()
+
+
 def rate_limit(request: Request, kind: str):
-    ip = (request.headers.get("x-forwarded-for") or request.client.host or "?").split(",")[0].strip()
+    ip = client_ip(request)
     limit, window = LIMITS[kind]
     q = _hits[(kind, ip)]
     now = time.time()
