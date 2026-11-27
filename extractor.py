@@ -23,12 +23,16 @@ MAX_DURATION = int(os.environ.get("MAX_DURATION_MIN", "60")) * 60
 MAX_HEIGHT = int(os.environ.get("MAX_HEIGHT", "1080"))
 
 # Optional cookies.txt to get past YouTube's "confirm you're not a bot" on servers.
+# Sources, in order: Render Secret File, YT_COOKIES env var, local cookies.txt.
+# Always copied to a writable path because yt-dlp writes refreshed cookies back.
 COOKIE_FILE = None
-if os.environ.get("YT_COOKIES"):
+_cookie_src = next((p for p in (Path("/etc/secrets/cookies.txt"), BASE / "cookies.txt") if p.exists()), None)
+_cookie_text = os.environ.get("YT_COOKIES") or (_cookie_src.read_text() if _cookie_src else "")
+if _cookie_text.strip():
     COOKIE_FILE = BASE / ".cookies.txt"
-    COOKIE_FILE.write_text(os.environ["YT_COOKIES"])
-elif (BASE / "cookies.txt").exists():
-    COOKIE_FILE = BASE / "cookies.txt"
+    if not _cookie_text.lstrip().startswith("# "):
+        _cookie_text = "# Netscape HTTP Cookie File\n" + _cookie_text
+    COOKIE_FILE.write_text(_cookie_text)
 
 ID_RE = re.compile(
     r"^(?:https?://)?(?:www\.|m\.|music\.)?"
